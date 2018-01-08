@@ -1,12 +1,22 @@
 pipeline:
   build:
     image: node:alpine
-      commands:
-        - npm install
-        - npm run test
-        - npm run build
-  deploy:
-    image: node:alpine
-      commands:
-        - npm install
-	- npm start
+    commands:
+      - npm install
+      - npm run test
+      - npm run build
+  docker:
+    image: plugins/docker
+    dockerfile: Dockerfile
+    repo: badamsbb/node-example
+    tags: latest
+  rancher:
+    image: peloton/drone-rancher
+    url: http://192.168.220.129:8080
+    access_key: 3F38E86655F3E94B3B22
+    secret_key: XGe3FCJ5g2wx7xUXWJ3nDNrH7nmuXk8GgzWU6tgw
+    service: nodeexample/server
+    docker_image: badamsbb/node-example
+    confirm: true
+    timeout: 240
+    
