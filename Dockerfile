@@ -1,5 +1,7 @@
 FROM node:alpine
 
+MAINTAINER badamsbb
+
 RUN mkdir /app
 WORKDIR /app
 ADD . /app
