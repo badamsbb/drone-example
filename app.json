@@ -2,6 +2,6 @@
   "name": "Node.js Sample",
   "description": "A barebones Node.js app using Express 4",
   "repository": "https://github.com/badamsbb/drone-example",
-  "logo": "https://rawgit.com/badamsbb/drone-example/master/public/node.svg",
+  "logo": "https://cdn.jsdelivr.net/gh/badamsbb/drone-example/public/node.svg",
     "keywords": ["node", "express", "static", "drone"]
 }
